@@ -26,36 +26,30 @@ end
 user = User.create(user_data)
 
 city_data = [{
-    name: 'San Francisco',
+    city_name: 'San Francisco',
     photo: "http://www.sftravel.com/sites/sftraveldev.prod.acquia-sites.com/files/SanFrancisco_0.jpg"
   }, {
-    name: "London",
+    city_name: "London",
     photo: "https://media.timeout.com/images/100644443/image.jpg"
   }, {
-    name: "Gibraltar",
+    city_name: "Gibraltar",
     photo: "http://www.officialrocktours.com/images/mob/gibraltar-aerial.jpg"
   }
 ]
+city = City.create(city_data)
 
-post_data = [{
-  title: 'Best city ever!',
-  content: 'The food was great.  The weather was great.  Can not wait to return!',
-  user: user.sample,
-  city: city_data.sample
-  }, {
-    title: 'Wonderful food!',
-    content: 'I feel like I ate my way across the whole city and it was fantastic!
-    If you visit, make sure you try The Plant in in the financial district.',
+post_data = []
+10.times do
+  title = FFaker::Book.title
+  content = FFaker::HipsterIpsum.paragraph
+  post_data << {
+    title: title,
+    content: content,
     user: user.sample,
-    city: city_data.sample
-  }, {
-    title: 'Interesting people',
-    content: 'I had a great time exploring the parks in the city.  There were
-    many festivals and the locals were very kind.',
-    user: user.sample,
-    city: city_data.sample
-    }
-]
+    city: city.sample
+  }
+end
+post = Post.create(post_data)
 
 comment_data = [{
   user: user.sample,
@@ -69,3 +63,4 @@ comment_data = [{
     Stonking good idea, hitting up a random pub."
   }
 ]
+comment = Comment.create(comment_data)
