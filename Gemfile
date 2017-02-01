@@ -35,6 +35,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'httparty'
 # Use Carrier Wave to upload files to DB
 gem 'carrierwave', '~> 1.0'
+# Materialize-Sass
+gem 'materialize-sass', '~> 0.96.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
