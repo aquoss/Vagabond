@@ -15,7 +15,7 @@ user_data = []
 4.times do
   first = FFaker::Name.first_name
   last = FFaker::Name.last_name
-  city_data << {
+  user_data << {
     first_name: first,
     last_name: last,
     email: "#{first[0]}_#{last}@example.com".downcase,
