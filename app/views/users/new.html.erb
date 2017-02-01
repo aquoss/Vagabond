@@ -1,0 +1,9 @@
+<h2>Create Account</h2>
+
+<%= form_for @user do |f| %>
+ <%= f.text_field :first_name, class:"form-control", placeholder:"First Name" %>
+ <%= f.text_field :last_name, class:"form-control", placeholder:"Last Name" %>
+ <%= f.text_field :email, class:"form-control", placeholder:"Email Address" %>
+ <%= f.password_field :password, class:"form-control", placeholder:"password" %>
+ <%= f.submit "Save Your Info" %>
+<% end %>
