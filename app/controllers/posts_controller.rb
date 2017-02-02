@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
 
+  before_action :require_login, only: [:create, :update, :destroy]
+
   def show
     @post = Post.find_by_id(params[:id])
   end
+
 
   def new
     @post = Post.new
@@ -24,5 +27,6 @@ class PostsController < ApplicationController
   def post_params
     params.require(:user).permit(:first_name, :last_name, :email, :password)
   end
+
 
 end

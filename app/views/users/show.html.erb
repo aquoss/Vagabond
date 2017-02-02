@@ -1,9 +1,10 @@
 <h2>User Profile</h2>
 <h3>Welcome, <%= @user.first_name %> <%= @user.last_name %>!</h3>
+<%= image_tag @user.photo %>
 <p>Current City: <%= @user.current_city %> </p>
 <p>Join Date: <%= @user.created_at %> </p>
 <% if current_user then %>
-  <%= button_tag "Edit Profile" %>
+  <%= link_to "Edit Profile", edit_user_path(@user) %>
 <% end %>
 
 <h3>My Posts:</h3>
