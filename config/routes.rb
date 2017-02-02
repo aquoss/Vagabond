@@ -15,6 +15,13 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
 
   # USER POSTS ROUTES
-  get '/posts/:id', to: 'posts#show', as:'post'
+  get '/city/:id/posts/new', to: 'posts#new', as:'new_post'
+  get '/city/:id/posts/:id', to: 'posts#show', as:'post'
+  post '/city/:id/posts', to: 'posts#create'
+  get '/city/:id/posts/:id/edit', to: 'post#edit', as: 'edit_post'
+  patch '/city/:id/posts/:id', to: 'post#update'
+
+  # CITY ROUTES
+  get '/city/:id', to: 'cities#show', as:'city'
 
 end
