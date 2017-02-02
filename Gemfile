@@ -37,6 +37,10 @@ gem 'httparty'
 gem 'carrierwave', '~> 1.0'
 # Materialize-Sass
 gem 'materialize-sass', '~> 0.96.1'
+# CarrierWave
+gem 'carrierwave', '~> 1.0'
+# MiniMagick
+gem 'mini_magick', '~> 4.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
