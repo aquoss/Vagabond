@@ -3,7 +3,7 @@
 <p>Current City: <%= @user.current_city %> </p>
 <p>Join Date: <%= @user.created_at %> </p>
 <% if current_user then %>
-  <%= button_tag "Edit Profile" %>
+  <%= link_to "Edit Profile", edit_user_path(@user) %>
 <% end %>
 
 <h3>My Posts:</h3>
