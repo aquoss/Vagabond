@@ -14,3 +14,7 @@
     <%= f.submit "Save Post", class: "btn btn-block btn-success" %>
   </div>
 <% end %>
+
+<% flash.each do |name, msg| %>
+  <div><%= msg %></div>
+<% end %>

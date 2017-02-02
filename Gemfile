@@ -33,8 +33,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # Httparty
 gem 'httparty'
-# Use Carrier Wave to upload files to DB
-gem 'carrierwave', '~> 1.0'
 # Materialize-Sass
 gem 'materialize-sass', '~> 0.96.1'
 # CarrierWave

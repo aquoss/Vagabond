@@ -3,11 +3,11 @@
 <%= image_tag @user.photo %>
 <p>Current City: <%= @user.current_city %> </p>
 <p>Join Date: <%= @user.created_at %> </p>
-<% if current_user then %>
+<% if @user == current_user then %>
   <%= link_to "Edit Profile", edit_user_path(@user) %>
 <% end %>
 
 <h3>My Posts:</h3>
 <% @user.posts.each do |post| %>
-  <%= link_to "#{post.title}", post_path(post) %><br>
+  <%= link_to "#{post.title}", city_post_path(post.city, post) %><br>
 <% end %>
