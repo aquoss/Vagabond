@@ -16,16 +16,16 @@ class PostsController < ApplicationController
     post = Post.new(post_params)
       if post.save
         current_user.posts << post
-        redirect_to post_path
+        redirect_to city_post_path
       else
-        redirect_to new_post_path
+        redirect_to new_city_post_path
       end
   end
 
   private
 
   def post_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password)
+    params.require(:user).permit(:title, :content)
   end
 
 
