@@ -1,6 +1,10 @@
 <h2>Create Account</h2>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, html: { multipart:true } do |f| %>
+  <div>
+   <label> Add a profile photo! </label>
+   <%= f.file_field :photo %>
+ </div>
  <%= f.text_field :first_name, class:"form-control", placeholder:"First Name" %>
  <%= f.text_field :last_name, class:"form-control", placeholder:"Last Name" %>
  <%= f.text_field :current_city, class:"form-control", placeholder:"Current City" %>
