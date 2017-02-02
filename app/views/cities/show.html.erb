@@ -2,7 +2,7 @@
 <div id="cityHeroImage"><%= image_tag @city.photo %> </div>
 
 <h2>Adventures!</h2>
-<% @city.posts.each do |post| %>
+<% @city.posts.order(created_at: :desc).each do |post| %>
   <%= link_to "#{post.title}", post_path(post) %>, <br>
 <% end %>
 

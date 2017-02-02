@@ -1,4 +1,5 @@
-<%= form_for @post, url: '/posts' do |f| %>
+<h2>Create Post</h2>
+<%= form_for [@city, @post] do |f| %>
   <div class="form-group">
     <%= f.text_field :city, class: "form-control", placeholder: "City Name", autofocus: true %>
   </div>
@@ -6,7 +7,7 @@
     <%= f.text_field :title, class: "form-control", placeholder: "The title for your post" %>
   </div>
   <div class="form-group">
-    <%= f.email_field :content, class: "form-control", placeholder: "Your experience in the city" %>
+    <%= f.text_field :content, class: "form-control", placeholder: "Your experience in the city" %>
   </div>
 
   <div class="form-group">
