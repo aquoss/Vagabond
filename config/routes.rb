@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
 
   # USER POSTS ROUTES
+  get '/posts/new', to: 'posts#new', as:'new_post'
   get '/posts/:id', to: 'posts#show', as:'post'
+  post '/posts', to: 'posts#create'
+
+  # CITY ROUTES
+  get '/city/:id', to: 'cities#show', as:'city'
 
 end
