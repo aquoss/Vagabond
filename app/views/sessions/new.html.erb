@@ -5,3 +5,7 @@
  <%= f.password_field :password, placeholder: "Password" %>
  <%= f.submit "Log In" %>
 <% end %>
+
+<% flash.each do |name,msg| %>
+  <div><%= msg %></div>
+<% end %>
