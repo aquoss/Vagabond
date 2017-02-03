@@ -1,0 +1,10 @@
+<h3>Welcome to <%= @city.city_name %>!</h3>
+<div id="cityHeroImage"><%= image_tag @city.photo %> </div>
+
+<h2>Adventures!</h2>
+<% @city.posts.order(created_at: :desc).each do |post| %>
+  <%= link_to "#{post.title}", city_post_path(@city, post) %>, <br>
+<% end %>
+
+
+<%= link_to "Add New Post for #{@city.city_name}", new_city_post_path(@city) %>

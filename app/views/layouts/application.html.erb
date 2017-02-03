@@ -9,6 +9,32 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a class="brand-logo center"><h1 class="logo">Vagabond</h1></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <% if current_user %>
+              <li><%= link_to "Profile", user_path(current_user) %></li>
+              <li><%= link_to "Log Out", logout_path %></li>
+            <% else %>
+              <li><%= link_to "Create Account", new_user_path %></li>
+              <li><%= link_to "Log In", login_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <% flash.each do |name,msg| %>
+      <script type="text/javascript">
+        Materialize.toast('<%= msg %>', 4000)
+      </script>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
