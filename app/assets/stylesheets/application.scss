@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "materialize.css";
+@import "sessions.scss";
+@import "users.scss";
 @import url('https://fonts.googleapis.com/css?family=Bahiana|Barrio');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 body {
   background-color: #FFC2B7;
