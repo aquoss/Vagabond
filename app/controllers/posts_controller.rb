@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :require_login, only: [:create, :update, :destroy]
 
   def show
+    @city = City.find_by_id(params[:city_id])
     @post = Post.find_by_id(params[:id])
   end
 
@@ -12,20 +13,37 @@ class PostsController < ApplicationController
     @city = City.find_by_id(params[:city_id])
   end
 
+  def edit
+    @city = City.find_by_id(params[:city_id])
+    @post = Post.find_by_id(params[:id])
+  end
+
   def create
+    @city = City.find_by_id(params[:city_id])
     post = Post.new(post_params)
       if post.save
         current_user.posts << post
-        redirect_to city_post_path
+        @city.posts << post
+        redirect_to city_post_path(@city, post)
       else
         redirect_to new_city_post_path
       end
   end
 
+  def update
+    @city = City.find_by_id(params[:city_id])
+    post = Post.find_by_id(params[:id])
+    if post.update(post_params)
+      redirect_to city_post_path(@city, post)
+    else
+      redirect_to exit_city_post_path(@city, post)
+    end
+  end
+
   private
 
   def post_params
-    params.require(:user).permit(:title, :content)
+    params.require(:post).permit(:title, :content)
   end
 
 

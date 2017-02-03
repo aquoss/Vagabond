@@ -1,5 +1,5 @@
-<h2>Create Post</h2>
-<%= form_for [@city, @post] do |f| %>
+<h2>Edit Your Post</h2>
+<%= form_for(@post, :url => {:action => 'update', :id => @post.id}) do |f| %>
   <div class="form-group">
     <%= f.text_field :title, class: "form-control", placeholder: "The title for your post" %>
   </div>
