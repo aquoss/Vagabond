@@ -41,10 +41,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    p 'destroy was called'
     @city = City.find_by_id(params[:city_id])
     post = Post.find_by_id(params[:id])
     post.destroy
+    redirect_to city_path(@city)
   end
+
 
   private
 
