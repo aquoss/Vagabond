@@ -36,7 +36,8 @@ class PostsController < ApplicationController
     if post.update(post_params)
       redirect_to city_post_path(@city, post)
     else
-      redirect_to exit_city_post_path(@city, post)
+      flash[:error] = post.errors.full_messages.join(", ")
+      redirect_to edit_city_post_path(@city, post)
     end
   end
 
