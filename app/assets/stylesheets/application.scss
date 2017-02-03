@@ -1,0 +1,21 @@
+// Place all the styles related to the application controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "materialize.css";
+@import url('https://fonts.googleapis.com/css?family=Bahiana|Barrio');
+
+body {
+  background-color: #FFC2B7;
+}
+
+.logo {
+  font-size: 2em;
+  font-family: "Barrio";
+  margin-top: 0;
+  padding-left: 2%;
+}
+
+nav {
+  background-color: #FF4523;
+}
