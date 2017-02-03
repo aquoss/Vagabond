@@ -1,13 +1,45 @@
-<h2>User Profile</h2>
-<h3>Welcome, <%= @user.first_name %> <%= @user.last_name %>!</h3>
-<%= image_tag @user.photo %>
-<p>Current City: <%= @user.current_city %> </p>
-<p>Join Date: <%= @user.created_at %> </p>
-<% if @user == current_user then %>
-  <%= link_to "Edit Profile", edit_user_path(@user) %>
-<% end %>
-
-<h3>My Posts:</h3>
-<% @user.posts.each do |post| %>
-  <%= link_to "#{post.title}", city_post_path(post.city, post) %><br>
-<% end %>
+<h3 class="center">User Show</h3>
+<br>
+<div class="row">
+    <div class="col s12 m5">
+      <div class="card">
+        <div class="card-image">
+          <%= image_tag @user.photo, class: "userphoto" %>
+          <span class="card-title"><%= @user.first_name %> <%= @user.last_name %></span>
+          <% if @user == current_user then %>
+            <%= link_to edit_user_path(@user), :class => 'btn-floating halfway-fab waves-effect waves-light red right edit-circle' do %>
+              <i class="material-icons">mode_edit</i>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="card-content">
+          <p>Current City: <%= @user.current_city %></p>
+          <p>Join Date: <%= @user.created_at %> </p>
+        </div>
+      </div>
+    </div>
+  <div class="col s12 m6 offset-m1">
+    <h4 class="center">My Posts</h4>
+    <br>
+    <% @user.posts.each do |post| %>
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content">
+            <div class="col m10">
+              <%= link_to "#{post.title}", city_post_path(post.city, post) %>
+              <br>
+              <%= "#{post.content}" %>
+              <br><br>
+            </div>
+            <div class="col m2">
+              <br>
+              <i class="material-icons">mode_edit</i>
+              <br><br>
+              <i class="material-icons">delete</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
