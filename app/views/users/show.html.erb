@@ -7,16 +7,14 @@
           <%= image_tag @user.photo, class: "userphoto" %>
           <span class="card-title"><%= @user.first_name %> <%= @user.last_name %></span>
           <% if @user == current_user then %>
-            <a href="<%= edit_user_path(@user) %>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
+            <%= link_to edit_user_path(@user), :class => 'btn-floating halfway-fab waves-effect waves-light red right edit-circle' do %>
+              <i class="material-icons">mode_edit</i>
+            <% end %>
           <% end %>
         </div>
         <div class="card-content">
           <p>Current City: <%= @user.current_city %></p>
           <p>Join Date: <%= @user.created_at %> </p>
-          <br>
-          <% if @user == current_user then %>
-            <%= link_to "Edit Profile", edit_user_path(@user), class: "waves-effect waves-light btn" %>
-          <% end %>
         </div>
       </div>
     </div>

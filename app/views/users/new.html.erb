@@ -1,14 +1,26 @@
-<h2>Create Account</h2>
+<div class="row">
+  <div class="col m6 offset-m3 form">
+    <%= form_for @user, html: { multipart:true } do |f| %>
+      <div class="col m6">
+        <%= f.text_field :first_name, class:"form-control", placeholder:"First Name" %>
+      </div>
+      <div class="col m6">
+        <%= f.text_field :last_name, class:"form-control", placeholder:"Last Name" %>
+      </div>
+      <div class="col s12">
+        <%= f.text_field :current_city, class:"form-control", placeholder:"Current City" %>
+        <%= f.text_field :email, class:"form-control", placeholder:"Email Address" %>
+        <%= f.password_field :password, class:"form-control", placeholder:"Password" %>
+        <label> Add a profile photo! </label>
+        <br>
+        <%= f.file_field :photo %>
+      </div>
+      <div class="col m6 offset-m3">
+        <br>
+        <%= f.submit "Save Your Info", class: "waves-effect waves-light btn-large form-button" %>
+        <br><br>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<%= form_for @user, html: { multipart:true } do |f| %>
-  <div>
-   <label> Add a profile photo! </label>
-   <%= f.file_field :photo %>
- </div>
- <%= f.text_field :first_name, class:"form-control", placeholder:"First Name" %>
- <%= f.text_field :last_name, class:"form-control", placeholder:"Last Name" %>
- <%= f.text_field :current_city, class:"form-control", placeholder:"Current City" %>
- <%= f.text_field :email, class:"form-control", placeholder:"Email Address" %>
- <%= f.password_field :password, class:"form-control", placeholder:"password" %>
- <%= f.submit "Save Your Info" %>
-<% end %>
