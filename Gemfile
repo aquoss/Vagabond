@@ -33,12 +33,17 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # Httparty
 gem 'httparty'
-# Use Carrier Wave to upload files to DB
-gem 'carrierwave', '~> 1.0'
+
 # normalize
 gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 # Materialize-Sass
 gem 'materialize-sass', '~> 0.97.8'
+
+# CarrierWave
+gem 'carrierwave', '~> 1.0'
+# MiniMagick
+gem 'mini_magick', '~> 4.3'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

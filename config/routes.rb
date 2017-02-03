@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   post '/sessions', to: 'sessions#create'
 
-  # USER POSTS ROUTES
-  get '/posts/:id', to: 'posts#show', as:'post'
+  # CITIES AND POSTS ROUTES
+  resources :cities do
+    resources :posts
+  end
 
 end
