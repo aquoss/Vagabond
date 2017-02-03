@@ -5,7 +5,17 @@
 @import "materialize.css";
 @import url('https://fonts.googleapis.com/css?family=Bahiana|Barrio');
 
-h1 {
-  font-size: 5em;
+body {
+  background-color: #FFC2B7;
+}
+
+.logo {
+  font-size: 2em;
   font-family: "Barrio";
+  margin-top: 0;
+  padding-left: 2%;
+}
+
+nav {
+  background-color: #FF4523;
 }
