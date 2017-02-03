@@ -26,6 +26,7 @@ class PostsController < ApplicationController
         @city.posts << post
         redirect_to city_post_path(@city, post)
       else
+        flash[:error] = post.errors.full_messages.join(". ")
         redirect_to new_city_post_path
       end
   end
@@ -36,7 +37,7 @@ class PostsController < ApplicationController
     if post.update(post_params)
       redirect_to city_post_path(@city, post)
     else
-      flash[:error] = post.errors.full_messages.join(", ")
+      flash[:error] = post.errors.full_messages.join(". ")
       redirect_to edit_city_post_path(@city, post)
     end
   end
