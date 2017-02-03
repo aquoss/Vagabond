@@ -3,5 +3,5 @@
 <p><%= @post.content %></p>
 
 <% if @post.user == current_user %>
-  <%= link_to "Edit Post", edit_city_post_path(@post.city, @post) %>
+  <%= link_to "Edit Post", edit_city_post_path(@city) %>
 <% end %>
