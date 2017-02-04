@@ -26,7 +26,7 @@
         <div class="card-stacked">
           <div class="card-content">
             <div class="col m10">
-              City: <%= link_to "#{post.city.city_name}", city_path(post) %>
+              City: <%= link_to "#{post.city.city_name}", city_path(post.city.id) %>
               <br>
               <b><%= link_to "#{post.title}", city_post_path(post.city, post) %></b>
               <br>
