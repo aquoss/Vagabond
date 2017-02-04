@@ -1,23 +1,45 @@
 <h3 class="center">User Show</h3>
 <br>
 <div class="row">
-    <div class="col s12 m5">
-      <div class="card">
-        <div class="card-image">
-          <%= image_tag @user.photo, class: "userphoto" %>
-          <span class="card-title"><%= @user.first_name %> <%= @user.last_name %></span>
-          <% if @user == current_user then %>
-            <%= link_to edit_user_path(@user), :class => 'btn-floating halfway-fab waves-effect waves-light red right edit-circle' do %>
-              <i class="material-icons">mode_edit</i>
-            <% end %>
+  <div class="col s12 m5">
+    <div class="card">
+      <div class="card-image">
+        <%= image_tag @user.photo, class: "userphoto" %>
+        <span class="card-title"><%= @user.first_name %> <%= @user.last_name %></span>
+        <% if @user == current_user then %>
+          <%= link_to edit_user_path(@user), :class => 'btn-floating halfway-fab waves-effect waves-light red right edit-circle' do %>
+            <i class="material-icons">mode_edit</i>
           <% end %>
-        </div>
-        <div class="card-content">
-          <p>Current City: <%= @user.current_city %></p>
-          <p>Join Date: <%= @user.created_at %> </p>
-        </div>
+        <% end %>
+      </div>
+      <div class="card-content">
+        <p>Current City: <%= @user.current_city %></p>
+        <p>Join Date: <%= @user.created_at %> </p>
       </div>
     </div>
+    <% if @user == current_user %>
+      <div class="card">
+        <h5>Following</h5>
+        <div class="card-content">
+          <% @user.following.each do |followed| %>
+            <p><strong><%= link_to "#{followed.first_name} #{followed.last_name}", user_path(followed) %><br></strong></p>
+            <!-- <%= image_tag followed.photo %> -->
+          <% end %>
+        </div>
+      </div>
+    <% else %>
+      <div class="card">
+        <h5>Followers</h5>
+        <div class="card-content">
+          <% @user.followers.each do |follower| %>
+            <p><strong><%= link_to "#{follower.first_name} #{follower.last_name}", user_path(follower) %><br></strong></p>
+            <!-- <%= image_tag follower.photo %> -->
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
   <div class="col s12 m6 offset-m1">
     <h4 class="center">My Posts</h4>
     <br>
@@ -42,4 +64,5 @@
       </div>
     <% end %>
   </div>
+
 </div>
