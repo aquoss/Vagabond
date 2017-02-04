@@ -12,7 +12,7 @@ Post.destroy_all
 Comment.destroy_all
 
 user_data = []
-4.times do
+10.times do
   first = FFaker::Name.first_name
   last = FFaker::Name.last_name
   user_data << {
@@ -34,12 +34,27 @@ city_data = [{
   }, {
     city_name: "Gibraltar",
     photo: "http://www.officialrocktours.com/images/mob/gibraltar-aerial.jpg"
+  }, {
+    city_name: "Tokyo",
+    photo: "http://vacationadvice101.com/wp-content/uploads/2013/04/Tokyo-Tower-and-Tokyo-Skyline-at-night.jpg"
+  }, {
+    city_name: "Beijing",
+    photo: "https://www.sarahlawrence.edu/media/study-abroad-and-exchange/beijing/beijing_main_shutterstock_111796310.jpg"
+  }, {
+    city_name: "Sydney",
+    photo: "http://www.allianceabroad.com/wp-content/uploads/sydney_harbour.jpg"
+  }, {
+    city_name: "Paris",
+    photo: "http://images.huffingtonpost.com/2015-11-19-1447968585-1661590-6672156239_89c77d53d8_o.jpg"
+  }, {
+    city_name: "Reykavik",
+    photo: "http://blog.radissonblu.com/wp-content/uploads/2015/04/Reykjavik-city.jpg"
   }
 ]
 city = City.create(city_data)
 
 post_data = []
-10.times do
+30.times do
   title = FFaker::Book.title
   content = FFaker::HipsterIpsum.paragraph
   post_data << {
@@ -60,7 +75,7 @@ comment_data = [{
   }, {
     user: user.sample,
     content: "Having a bit of a faff I took a dekko and found a right great nosh.
-    Stonking good idea, hitting up a random pub."
+    Stonking good idea hitting up a random pub."
   }
 ]
 comment = Comment.create(comment_data)
