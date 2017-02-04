@@ -23,7 +23,7 @@
         <div class="card-content">
           <% @user.following.each do |followed| %>
             <p><strong><%= link_to "#{followed.first_name} #{followed.last_name}", user_path(followed) %><br></strong></p>
-            <!-- <%= image_tag followed.photo %> -->
+            <!-- <%= image_tag followed.photo, class: "sm-prof-pic" %> -->
           <% end %>
         </div>
       </div>
@@ -33,7 +33,7 @@
         <div class="card-content">
           <% @user.followers.each do |follower| %>
             <p><strong><%= link_to "#{follower.first_name} #{follower.last_name}", user_path(follower) %><br></strong></p>
-            <!-- <%= image_tag follower.photo %> -->
+            <!-- <%= image_tag follower.photo, class: "sm-prof-pic" %> -->
           <% end %>
         </div>
       </div>
