@@ -1,17 +1,17 @@
-<h2>Edit Your Post</h2>
-<%= form_for(@post, :url => {:action => 'update', :id => @post.id}) do |f| %>
-  <div class="form-group">
-    <%= f.text_field :title, class: "form-control", placeholder: "The title for your post" %>
+<div class="row">
+  <div class="col m6 offset-m3 form">
+    <%= form_for(@post, :url => {:action => 'update', :id => @post.id}) do |f| %>
+    <div class="col m12">
+      <%= f.text_field :title, class: "form-control", placeholder: "The title for your post" %>
+    </div>
+    <div class="col m12">
+      <%= f.text_field :content, class: "form-control", placeholder: "Your experience in the city" %>
+    </div>
+    <div class="col m6 offset-m3">
+      <br>
+      <%= f.submit "Save Post", class: "waves-effect waves-light btn-large form-button" %>
+      <br><br>
+    </div>
+    <% end %>
   </div>
-  <div class="form-group">
-    <%= f.text_field :content, class: "form-control", placeholder: "Your experience in the city" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.submit "Save Post", class: "btn btn-block btn-success" %>
-  </div>
-<% end %>
-
-<% flash.each do |name, msg| %>
-  <div><%= msg %></div>
-<% end %>
+</div>

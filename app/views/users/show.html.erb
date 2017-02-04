@@ -12,7 +12,7 @@
             <% end %>
           <% end %>
         </div>
-        <div class="card-content">
+        <div class="card-content user-info">
           <p>Current City: <%= @user.current_city %></p>
           <p>Join Date: <%= @user.created_at %> </p>
         </div>
@@ -24,7 +24,7 @@
     <% @user.posts.each do |post| %>
       <div class="card horizontal">
         <div class="card-stacked">
-          <div class="card-content">
+          <div class="card-content post-card">
             <div class="col m10">
               <%= link_to "#{post.title}", city_post_path(post.city, post) %>
               <br>
