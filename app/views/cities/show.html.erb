@@ -3,8 +3,8 @@
 
 <h2>Adventures!</h2>
 <% @city.posts.order(created_at: :desc).each do |post| %>
-  <%= link_to "#{post.title}", city_post_path(@city, post) %>, <br>
+  <b><%= link_to "#{post.title}", city_post_path(@city, post)%></b>
+  by <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(post.user) %> <br>
 <% end %>
-
 
 <%= link_to "Add New Post for #{@city.city_name}", new_city_post_path(@city) %>
