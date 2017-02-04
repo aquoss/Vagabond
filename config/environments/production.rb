@@ -1,6 +1,20 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # GMAIL ADDRESSES
+
+  # config.action_mailer.default_url_options = {:host => 'localhost:8080'}
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :address              => "smtp.gmail.com",
+  #   :port                 => 587,
+  #   :user_name            => 'testvagabond@gmail.com',
+  #   :password             => 'testvagabon',
+  #   :authentication       => 'plain',
+  #   :enable_starttls_auto => true
+  #   # :openssl_verify_mode  => 'none'
+  # }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
