@@ -18,8 +18,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to user_path(user)
       # Tell the UserMailer to send a welcome email after save
-      UserMailer.welcome_email(user).deliver
-      p "end of new user create"
+      UserMailer.welcome_email(user).deliver_now
     else
       flash[:error] = user.errors.full_messages.join(", ")
       redirect_to new_user_path
