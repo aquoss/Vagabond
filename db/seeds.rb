@@ -9,7 +9,6 @@
 City.destroy_all
 User.destroy_all
 Post.destroy_all
-Comment.destroy_all
 
 user_data = []
 15.times do
