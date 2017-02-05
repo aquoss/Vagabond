@@ -66,7 +66,6 @@ post_data = []
 end
 post = Post.create(post_data)
 
-<<<<<<< HEAD
 comment_data = [{
   user: user.sample,
   content: 'I agree'
@@ -80,8 +79,6 @@ comment_data = [{
   }
 ]
 comment = Comment.create(comment_data)
-=======
->>>>>>> 05a92a7a368421b127b099909235a108087d73bb
 # comment_data = [{
 #   user: user.sample,
 #   content: 'I agree'
@@ -100,7 +97,3 @@ following = user[2..10]
 followers = user[3..8]
 following.each { |followed| user.first.follow(followed) }
 followers.each { |follower| follower.follow(user.first) }
-<<<<<<< HEAD
-=======
-
->>>>>>> 05a92a7a368421b127b099909235a108087d73bb
