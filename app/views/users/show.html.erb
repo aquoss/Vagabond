@@ -19,25 +19,9 @@
       </div>
     </div>
     <% if @user == current_user %>
-      <div class="card">
-        <div class="card-content">
-          <h5>Following</h5>
-          <% @user.following.each do |followed| %>
-            <p><strong><%= link_to "#{followed.first_name} #{followed.last_name}", user_path(followed) %><br></strong></p>
-            <!-- <%= image_tag followed.photo, class: "sm-prof-pic" %> -->
-          <% end %>
-        </div>
-      </div>
+      <%= render "following_card" %>
     <% else %>
-      <div class="card">
-        <div class="card-content">
-          <h5>Followers</h5>
-          <% @user.followers.each do |follower| %>
-            <p><strong><%= link_to "#{follower.first_name} #{follower.last_name}", user_path(follower) %><br></strong></p>
-            <!-- <%= image_tag follower.photo, class: "sm-prof-pic" %> -->
-          <% end %>
-        </div>
-      </div>
+      <%= render "followers_card" %>
     <% end %>
   </div>
 

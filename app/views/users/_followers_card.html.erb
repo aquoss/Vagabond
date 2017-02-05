@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-content">
+    <h5>Followers (<%=@user.followers.count%>)</h5>
+    <% @user.followers.take(10).each do |follower| %>
+      <%= image_tag follower.photo, class: "userphoto-small" %>
+      <p><strong><%= link_to "#{follower.first_name} #{follower.last_name}", user_path(follower) %><br></strong></p>
+      <% if follower.posts.first != nil %>
+        <p><%= follower.posts.first.content.first(80) %>...</p>
+        <p><small>Posted <%= time_ago_in_words(follower.posts.first.created_at) %> ago</small></p>
+      <% else %>
+        <p>No recent activity</p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
