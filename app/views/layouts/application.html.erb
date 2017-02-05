@@ -15,15 +15,14 @@
 
 
         <li><%= link_to "San Francisco", city_path(1) %></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
+        <li><%= link_to "London", city_path(2) %></li>
+        <li><%= link_to "Gibraltar", city_path(3) %></li>
       </ul>
       <nav>
         <div class="nav-wrapper">
           <%= link_to "Postcards", root_path, class: "brand-logo logo center" %>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Cities<i class="material-icons right">arrow_drop_down</i></a></li>
             <% if current_user %>
               <li><%= link_to "Profile", user_path(current_user) %></li>
               <li><%= link_to "Log Out", logout_path %></li>
@@ -45,5 +44,11 @@
     <div class="container">
       <%= yield %>
     </div>
+    <script type="text/javascript">
+      $( document ).ready(function(){
+        $(".dropdown-button").dropdown();
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+      });
+    </script>
   </body>
 </html>

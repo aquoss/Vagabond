@@ -22,6 +22,7 @@ h1 {
 .passport {
   height: 200px;
   margin-top: 75px;
+  float: right;
 }
 
 .postcard-border {
@@ -32,10 +33,9 @@ h1 {
 }
 
 .text {
-  // background-image: url("http://i.imgur.com/CZv4GTy.jpg");
+  background-image: url("http://i.imgur.com/3INFPYU.jpg");
   height: 490px;
-  background-size: 75% auto;
-  background-attachment: fixed;
+  background-size: auto;
   background-position: center;
   box-shadow: -12px 0 8px -10px white inset;
 }

@@ -1,4 +1,5 @@
 @import url(materialize.css);
+@import url(animate.css);
 @import url("https://fonts.googleapis.com/css?family=Barrio|Quattrocento+Sans:700");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .post-card {
@@ -49,7 +50,8 @@ h1 {
 
 .passport {
   height: 200px;
-  margin-top: 75px; }
+  margin-top: 75px;
+  float: right; }
 
 .postcard-border {
   margin-top: 100px;
@@ -58,9 +60,9 @@ h1 {
   float: right; }
 
 .text {
+  background-image: url("http://i.imgur.com/3INFPYU.jpg");
   height: 490px;
-  background-size: 75% auto;
-  background-attachment: fixed;
+  background-size: auto;
   background-position: center;
   box-shadow: -12px 0 8px -10px white inset; }
 
