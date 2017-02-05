@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.post-background {
-  background-color: rgba(255, 0, 0, .5);
+.content {
+  float: left;
+  overflow: auto;
+  height: 485px;
+  max-width: 475px;
+  text-align: left;
+}
+
+.post {
+  text-align: center;
 }

@@ -52,7 +52,7 @@
               <br>
               <b><%= link_to "#{post.title}", city_post_path(post.city, post) %></b>
               <br>
-              <%= "#{post.content}" %>
+              <%= "#{post.content.truncate(256)}" %>
               <br><br>
             </div>
             <div class="col m2">

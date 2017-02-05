@@ -1,4 +1,5 @@
 //= require jquery
+//= require turbolinks
 //= require jquery_ujs
 //= require materialize
-//= require posts.js
+//= require_tree .
