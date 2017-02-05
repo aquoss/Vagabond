@@ -19,7 +19,7 @@ user_data = []
     first_name: first,
     last_name: last,
     email: "#{first[0]}_#{last}@example.com".downcase,
-    password: 'a',
+    password_digest: 'a',
     current_city: 'San Francisco'
   }
 end
