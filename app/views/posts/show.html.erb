@@ -35,11 +35,6 @@
             <h5>in <%= link_to "#{@post.city.city_name}", city_path(@post.city.id) %></h5>
             <hr>
           </p>
-          <% if @user == current_user %>
-            <%= link_to "edit post", edit_city_post_path(@post.city, @post) %>
-            <br>
-            <%= link_to "delete post", city_post_path(@post.city, @post), action: "destroy" %>
-          <% end %>
         </div>
       </div>
     </div>
