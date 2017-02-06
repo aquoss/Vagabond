@@ -9,7 +9,6 @@
 City.destroy_all
 User.destroy_all
 Post.destroy_all
-Comment.destroy_all
 
 user_data = []
 15.times do
@@ -19,7 +18,7 @@ user_data = []
     first_name: first,
     last_name: last,
     email: "#{first[0]}_#{last}@example.com".downcase,
-    password_digest: 'a',
+    password: 'a',
     current_city: 'San Francisco'
   }
 end
