@@ -28,11 +28,11 @@ user = User.create(user_data)
 city_data = [{
     city_name: 'San Francisco',
     photo: "http://www.sftravel.com/sites/sftraveldev.prod.acquia-sites.com/files/SanFrancisco_0.jpg",
-    gif: "https://media.giphy.com/media/josB0ZKSutNgA/giphy.gif"
+    gif: "https://media.giphy.com/media/vD7jNwCgUXBdu/giphy.gif"
   }, {
     city_name: "London",
     photo: "https://media.timeout.com/images/100644443/image.jpg",
-    gif: "https://media.giphy.com/media/2Ozjbk786Umdy/giphy.gif"
+    gif: "https://media.giphy.com/media/pYhFb0kn2GhQQ/giphy.gif"
   }, {
     city_name: "Gibraltar",
     photo: "http://www.officialrocktours.com/images/mob/gibraltar-aerial.jpg",
@@ -42,9 +42,9 @@ city_data = [{
     photo: "http://vacationadvice101.com/wp-content/uploads/2013/04/Tokyo-Tower-and-Tokyo-Skyline-at-night.jpg",
     gif: "https://media.giphy.com/media/xTiTndRhkTeDSUEgak/giphy.gif"
   }, {
-    city_name: "Beijing",
+    city_name: "Hong Kong",
     photo: "https://www.sarahlawrence.edu/media/study-abroad-and-exchange/beijing/beijing_main_shutterstock_111796310.jpg",
-    gif: "https://media.giphy.com/media/Cz23XAf6TNJCM/source.gif"
+    gif: "https://media.giphy.com/media/tGOKSq52jeq3u/source.gif"
   }, {
     city_name: "Sydney",
     photo: "http://www.allianceabroad.com/wp-content/uploads/sydney_harbour.jpg",
