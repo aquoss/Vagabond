@@ -6,9 +6,13 @@
 @import "sessions.scss";
 @import "users.scss";
 @import "posts.scss";
+@import "cities.scss";
 @import url('https://fonts.googleapis.com/css?family=Bahiana|Barrio');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+html {
+  text-align: center;
+}
 
 .logo {
   font-size: 2em;
@@ -34,10 +38,4 @@ nav {
 
 input::-webkit-input-placeholder {
   color: #263238;
-}
-
-.form-button {
-  margin-top: 5%;
-  width: 100%;
-  background-color: #CC3333;
 }
