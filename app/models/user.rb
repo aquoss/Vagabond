@@ -15,11 +15,11 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   validates :email, uniqueness: {message: " is already taken! Log into your existing account or choose a different address."}
-  validates_presence_of :email, :password_digest, :first_name, :last_name
+  validates_presence_of :email, :password, :first_name, :last_name
 
   def self.confirm(params)
     @user = User.find_by({email: params[:email]})
-    @user ? @user.authenticate(params[:password_digest]) : false
+    @user ? @user.authenticate(params[:password]) : false
   end
 
   # follows a user
