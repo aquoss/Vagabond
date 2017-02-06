@@ -53,8 +53,16 @@ input::-webkit-input-placeholder {
   border-style: none;
 }
 
-.stamp-link {
+.stamp-link p {
+  text-align: center;
   font-size: 1.5em;
-  color: black;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.post a, .stamp-link, .user-post {
+  color: black;
+}
+
+.post a:hover, .stamp-link:hover, .user-post {
+  color: #FF0700;
 }

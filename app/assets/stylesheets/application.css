@@ -20,9 +20,6 @@
   border-radius: 100%;
   margin-top: 45px; }
 
-.post-background {
-  background-color: rgba(255, 0, 0, 0.5); }
-
 .content {
   float: left;
   overflow: auto;
@@ -32,11 +29,7 @@
   text-align: left; }
 
 .post-title {
-  text-align: center;
-  margin-left: 65px; }
-
-hr {
-  margin-left: 80px; }
+  text-align: center; }
 
 .post {
   text-align: center;
@@ -192,7 +185,13 @@ input::-webkit-input-placeholder {
   background-position: center;
   border-style: none; }
 
-.stamp-link {
+.stamp-link p {
+  text-align: center;
   font-size: 1.5em;
-  color: black;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; }
+
+.post a, .stamp-link, .user-post {
+  color: black; }
+
+.post a:hover, .stamp-link:hover, .user-post {
+  color: #FF0700; }
