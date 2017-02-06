@@ -2,20 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.content {
-  float: left;
-  overflow: auto;
-  height: 475px;
-  margin-top: 10px;
-  max-width: 470px;
-  text-align: left;
-}
-
-.post-title {
-  text-align: center;
-}
-
-.post {
-  text-align: center;
-  padding-top: 40px;
+.post-background {
+  background-color: rgba(255, 0, 0, .5);
 }

@@ -1,36 +1,12 @@
-<div class="row">
-  <div class="col m12 postcard-border animated rollIn">
-    <div class="row">
-      <div class="col m6 text-welcome">
-        <div class="vr animated rollIn">
+<h3>Welcome to <%= @city.city_name %>!</h3>
+<div id="cityHeroImage"><%= image_tag @city.photo %> </div>
 
-        </div>
-      </div>
-      <div class="col m6 address">
-        <div class="stamp animated rollIn">
-          <span class="p-font animated rollIn">P</span>
-        </div>
-        <br><br><br><br><br><br><br>
-        <p>A community for travelers to gather</p>
-        <hr>
-        <p>and share stories of their adventures.</p>
-        <hr>
-        <p>Looking for your next escapade idea?</p>
-        <hr>
-        <p>Postcard has you covered!</p>
-        <hr>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row center">
-  <% @city.each do |city| %>
-    <%= link_to city_path(city.id) do %>
-      <div class="citycard" style="background-image: url(<%= city.gif %>);">
-        <div class="col m6">
-          <p class="citycard-text"><%= city.city_name %></p>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
+<h2>Adventures!</h2>
+<% @city.posts.order(created_at: :desc).each do |post| %>
+  <b><%= link_to "#{post.title}", city_post_path(@city, post)%></b>
+  by <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(post.user) %> <br>
+<% end %>
+
+<% if current_user then %>
+  <%= link_to "Add New Post for #{@city.city_name}", new_city_post_path(@city) %>
+<% end %>
