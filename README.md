@@ -82,6 +82,25 @@ class UserMailer < ApplicationMailer
 end
 ```
 
+```Ruby
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to example.com, <%= @user.first_name %></h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: <%= @user.email %>.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: <%= @url %>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+```
+
 ### Mike
 I'm proud of setting up the basic foundation for most of sprint 2.  The final/provided status involved all
 of my teammates but I was able to accomplish much of this sprint (controller and view creation) which
@@ -136,7 +155,7 @@ end
 ```
 
 ## ERD:
-![Vagabond ERD](http://imgur.com/a/HeftV)
+![Vagabond ERD](http://i.imgur.com/4IXqIVJ.png)
 
 ## Technologies used:
 - Ruby
