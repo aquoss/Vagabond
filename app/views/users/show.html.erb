@@ -51,7 +51,7 @@
                   <i class="material-icons">mode_edit</i>
                 <% end %>
                 <br><br>
-                <%= link_to city_post_path(post.city, post), action: "destroy" do %>
+                <%= link_to city_post_path(post.city, post), method: :delete do %>
                   <i class="material-icons">delete</i>
                 <% end %>
               </div>
