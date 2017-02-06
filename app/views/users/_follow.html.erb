@@ -1,0 +1,5 @@
+<%= form_for (current_user.active_relationships.build) do |f| %>
+<!-- need the hidden field to send the user id as input to the controller -->
+  <div><%= hidden_field_tag :followed_id, @user.id %></div>
+  <%= f.submit "Follow my journey", class: "btn" %>
+<% end %>
