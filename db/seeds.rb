@@ -9,7 +9,6 @@
 City.destroy_all
 User.destroy_all
 Post.destroy_all
-Comment.destroy_all
 
 user_data = []
 15.times do
@@ -27,19 +26,42 @@ user = User.create(user_data)
 
 city_data = [{
     city_name: 'San Francisco',
-    photo: "http://www.sftravel.com/sites/sftraveldev.prod.acquia-sites.com/files/SanFrancisco_0.jpg"
+    photo: "http://www.sftravel.com/sites/sftraveldev.prod.acquia-sites.com/files/SanFrancisco_0.jpg",
+    gif: "https://media.giphy.com/media/vD7jNwCgUXBdu/giphy.gif"
   }, {
     city_name: "London",
-    photo: "https://media.timeout.com/images/100644443/image.jpg"
+    photo: "https://media.timeout.com/images/100644443/image.jpg",
+    gif: "https://media.giphy.com/media/pYhFb0kn2GhQQ/giphy.gif"
   }, {
     city_name: "Gibraltar",
-    photo: "http://www.officialrocktours.com/images/mob/gibraltar-aerial.jpg"
+    photo: "http://www.officialrocktours.com/images/mob/gibraltar-aerial.jpg",
+    gif: "https://media.giphy.com/media/12vbDdhxvStvWw/giphy.gif"
+  }, {
+    city_name: "Tokyo",
+    photo: "http://vacationadvice101.com/wp-content/uploads/2013/04/Tokyo-Tower-and-Tokyo-Skyline-at-night.jpg",
+    gif: "https://media.giphy.com/media/xTiTndRhkTeDSUEgak/giphy.gif"
+  }, {
+    city_name: "Hong Kong",
+    photo: "http://static.asiawebdirect.com/m/phuket/portals/hong-kong-hotels-ws/homepage/top10/top10-hotels/pagePropertiesImage/top10-hotels-hongkong.jpg",
+    gif: "https://media.giphy.com/media/tGOKSq52jeq3u/source.gif"
+  }, {
+    city_name: "Sydney",
+    photo: "http://www.allianceabroad.com/wp-content/uploads/sydney_harbour.jpg",
+    gif: "https://media.giphy.com/media/aUmSzhzcR2p6E/giphy.gif"
+  }, {
+    city_name: "Paris",
+    photo: "http://images.huffingtonpost.com/2015-11-19-1447968585-1661590-6672156239_89c77d53d8_o.jpg",
+    gif: "https://media.giphy.com/media/vXEeRBP3QeJ2w/giphy.gif"
+  }, {
+    city_name: "Reykjavik",
+    photo: "http://blog.radissonblu.com/wp-content/uploads/2015/04/Reykjavik-city.jpg",
+    gif: "https://media.giphy.com/media/4EhFiUaNYyZZS/giphy.gif"
   }
 ]
 city = City.create(city_data)
 
 post_data = []
-10.times do
+30.times do
   title = FFaker::Book.title
   content = FFaker::HipsterIpsum.paragraph
   post_data << {
@@ -50,20 +72,6 @@ post_data = []
   }
 end
 post = Post.create(post_data)
-
-# comment_data = [{
-#   user: user.sample,
-#   content: 'I agree'
-#   }, {
-#     user: user.sample,
-#     content: "I really liked eating at a scottish eatery called McDonald's."
-#   }, {
-#     user: user.sample,
-#     content: "Having a bit of a faff I took a dekko and found a right great nosh.
-#     Stonking good idea, hitting up a random pub."
-#   }
-# ]
-# comment = Comment.create(comment_data)
 
 following = user[2..10]
 followers = user[3..8]
