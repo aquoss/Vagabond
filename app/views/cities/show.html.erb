@@ -9,8 +9,10 @@
       </div>
       <div class="col m6 address">
         <div class="stamp">
-          <%= link_to new_city_post_path(@city.id), class: "stamp-link" do%>
-            <p> Add <br> Post </p>
+          <% if current_user %>
+            <%= link_to new_city_post_path(@city.id), class: "stamp-link" do%>
+              <p> Add <br> Post </p>
+            <% end %>
           <% end %>
         </div>
         <div class="post">
