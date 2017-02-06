@@ -2,6 +2,122 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+h3 {
+  margin: 0;
+  padding: 0.5em;
+}
+
+p {
+  margin-top: 0.5em;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #C18BFF;
+  transition: 0.3s;
+}
+
+.form-button {
+  margin-top: 5%;
+  width: 100%;
+  background-color: #CC3333;
+}
+
+.city-header {
+  margin: 0;
+  padding: .5em;
+  background-color: rgba(0,0,0,.8)
+}
+
+.city-image {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: -2px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.postcard-ld {
+  margin: 0 auto;
+  border: 2px white solid;
+  border-radius: 0.3em;
+  height: 8em;
+  width: 12em;
+}
+
+.postcard-posts-container {
+  margin: 1em 1%;
+}
+
+.postcard-ld-posts {
+  margin: 1em;
+  float: left;
+  padding: 1em;
+  border: 2px white solid;
+  border-radius: 0.3em;
+  height: 8em;
+  width: 12em;
+}
+
+.postcard-stamp {
+  line-height: 0em;
+  padding: 0.5em;
+  width: 2em;
+  height: 2em;
+  margin: 0.7em 0.8em -3em 12em;
+  border: 1px white solid;
+  float: right;
+}
+
+.postcard-font {
+  color: white;
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: left;
+}
+
+.postcard-number {
+  font-size: 0.7em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.postcard-ld-text {
+  height: 5em;
+  width: 7.5em;
+  border-right: 1px white solid;
+  margin-top: 2.5em;
+  padding: 1em;
+  padding-top: 0;
+  padding-bottom: 1px;
+  float: left;
+}
+
+.postcard-ld-addr {
+  height: 7.9em;
+  padding-top: 1.5em;
+  margin-left: 50%;
+}
+
+.add-new {
+  margin: 0;
+}
+
+.background {
+  margin: -1em;
+  height: 7.7em;
+  width: 11.7em;
+  background-color: rgba(0,0,0,0.6);
+  
 .post {
   overflow: auto;
   height: 300px;
@@ -10,11 +126,8 @@
 h1 {
   float: left;
   margin: 270px 0px 0px -150px;
-  /* Safari */
   -webkit-transform: rotate(-30deg);
-  /* Firefox */
   -moz-transform: rotate(-30deg);
-  /* IE */
   -ms-transform: rotate(-30deg);
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   font-family: "Quattrocento Sans"; }

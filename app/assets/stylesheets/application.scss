@@ -12,6 +12,9 @@
 @import url('https://fonts.googleapis.com/css?family=Barrio|Quattrocento+Sans:700');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+html {
+  text-align: center;
+}
 
 .logo {
   font-size: 2em;
@@ -37,10 +40,4 @@ nav {
 
 input::-webkit-input-placeholder {
   color: #263238;
-}
-
-.form-button {
-  margin-top: 5%;
-  width: 100%;
-  background-color: #CC3333;
 }
