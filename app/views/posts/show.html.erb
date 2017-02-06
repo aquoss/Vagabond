@@ -12,7 +12,14 @@
       </div>
       <div class="col m6 address">
         <div class="stamp">
-          <span class="p-font">P</span>
+          <%= link_to new_city_post_path(@city.id), class: "stamp-link" do%>
+            <p><span class="make-small"> Delete</span> <br> Post </p>
+          <% end %>
+        </div>
+        <div class="stamp">
+          <%= link_to edit_city_post_path(@post.city.id, @post.id), class: "stamp-link" do%>
+          <p> Edit <br> Post </p>
+          <% end %>
         </div>
         <div class="post">
             <p>

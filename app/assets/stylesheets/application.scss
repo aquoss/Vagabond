@@ -44,3 +44,17 @@ input::-webkit-input-placeholder {
   width: 100%;
   background-color: #CC3333;
 }
+
+.stamp {
+  background-color: white;
+  background-image: url("http://i.imgur.com/i6m1DtW.png");
+  background-size: cover;
+  background-position:center;
+  border-style: none;
+}
+
+.stamp-link {
+  font-size: 1.5em;
+  color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
