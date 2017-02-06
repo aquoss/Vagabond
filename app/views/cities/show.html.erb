@@ -41,4 +41,15 @@
 <% @city.posts.order(created_at: :desc).each do |post| %>
   <b><%= link_to "#{post.title}", city_post_path(@city, post)%></b>
   by <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(post.user) %> <br>
+<<<<<<< HEAD
 <% end %> -->
+=======
+<% end %>
+
+
+<% if current_user then %>
+  <%= link_to "Add New Post for #{@city.city_name}", new_city_post_path(@city) %>
+<% end %>
+
+<%= link_to "Add New Post for #{@city.city_name}", new_city_post_path(@city) %> -->
+>>>>>>> dad142082a675c489d69e323f67afefe57018b50
