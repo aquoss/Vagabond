@@ -28,8 +28,3 @@
     </div>
   </div>
 </div>
-<div class="newPostLink">
-  <% if current_user then %>
-    <%= link_to "Add New Post for #{@city.city_name}", new_city_post_path(@city) %>
-  <% end %>
-</div>
