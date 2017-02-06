@@ -1,42 +1,36 @@
-<span class="position"><h1>Welcome to <%= @city.city_name %></h1></span>
 <div class="row">
-  <div class="col m12 postcard-border">
+  <div class="col m12 postcard-border animated rollIn">
     <div class="row">
-      <div class="col m6 text" style="background-image: url(<%= @city.photo %>);">
-        <div class="vr">
+      <div class="col m6 text-welcome">
+        <div class="vr animated rollIn">
 
         </div>
       </div>
       <div class="col m6 address">
-        <div class="stamp">
-          <span class="p-font">P</span>
+        <div class="stamp animated rollIn">
+          <span class="p-font animated rollIn">P</span>
         </div>
-        <div class="post">
-          <% @city.posts.order(created_at: :desc).each do |post| %>
-            <p>
-              <strong><%= link_to "#{post.title}", city_post_path(@city, post)%></strong>
-              by <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(post.user) %>
-            </p>
-            <hr>
-          <% end %>
-        </div>
+        <br><br><br><br><br><br><br>
+        <p>A community for travelers to gather</p>
+        <hr>
+        <p>and share stories of their adventures.</p>
+        <hr>
+        <p>Looking for your next escapade idea?</p>
+        <hr>
+        <p>Postcard has you covered!</p>
+        <hr>
       </div>
-
     </div>
   </div>
 </div>
-
-
-
-
-
-<!-- <h3>Welcome to <%= @city.city_name %>!</h3>
-<div id="cityHeroImage"><%= image_tag @city.photo %> </div>
-
-<h2>Adventures!</h2>
-<% @city.posts.order(created_at: :desc).each do |post| %>
-  <b><%= link_to "#{post.title}", city_post_path(@city, post)%></b>
-  by <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(post.user) %> <br>
-<% end %>
-
-<%= link_to "Add New Post for #{@city.city_name}", new_city_post_path(@city) %> -->
+<div class="row center">
+  <% @city.each do |city| %>
+    <%= link_to city_path(city.id) do %>
+      <div class="citycard" style="background-image: url(<%= city.gif %>);">
+        <div class="col m6">
+          <p class="citycard-text"><%= city.city_name %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
