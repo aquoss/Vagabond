@@ -1,3 +1,28 @@
 // Place all the styles related to the cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post {
+  overflow: auto;
+  height: 300px;
+}
+
+h1 {
+  float: left;
+  margin: 270px 0px 0px -150px;
+  /* Safari */
+  -webkit-transform: rotate(-30deg);
+  /* Firefox */
+  -moz-transform: rotate(-30deg);
+  /* IE */
+  -ms-transform: rotate(-30deg);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: "Quattrocento Sans"; }
+
+.text {
+  height: 490px;
+  background-size: auto 100%;
+  background-attachment: fixed;
+  background-position: center;
+  box-shadow: -12px 0 8px -10px white inset;
+}
