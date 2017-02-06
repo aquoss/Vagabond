@@ -30,9 +30,10 @@ h1 {
   border: 5px solid black;
   height: 500px;
   float: right;
+  margin-bottom: 20px
 }
 
-.text {
+.text-welcome {
   background-image: url("http://i.imgur.com/3INFPYU.jpg");
   height: 490px;
   background-size: auto;
@@ -73,4 +74,32 @@ p {
 hr {
   margin-top: 10px;
   width: 75%;
+}
+
+.citycard {
+  float: left;
+  height: 200px;
+  width: 32%;
+  border: 1px solid black;
+  margin: 0 6.5px 10px;;
+}
+
+// .citycard-vr {
+//   border-right: 1px solid black;
+//   height: 175px;
+//   margin: 15px -15px 0 0;
+// }
+
+.citycard-text {
+  float: left;
+  /* Safari */
+  -webkit-transform: rotate(-30deg);
+  /* Firefox */
+  -moz-transform: rotate(-30deg);
+  /* IE */
+  -ms-transform: rotate(-30deg);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: "Quattrocento Sans";
+  font-size: 2em;
+  background-position: center;
 }

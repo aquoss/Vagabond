@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col m12 postcard-border animated rollIn">
     <div class="row">
-      <div class="col m6 text">
+      <div class="col m6 text-welcome">
         <div class="vr animated rollIn">
 
         </div>
@@ -20,9 +20,16 @@
         <hr>
         <p>Postcard has you covered!</p>
         <hr>
-
       </div>
-
     </div>
   </div>
+</div>
+<div class="row center">
+  <% @city.each do |city| %>
+  <div class="citycard" style="background-image: url(<%= city.gif %>);">
+    <div class="col m6">
+      <p class="citycard-text"><%= city.city_name %></p>
+    </div>
+  </div>
+  <% end %>
 </div>
