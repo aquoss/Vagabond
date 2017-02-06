@@ -16,6 +16,8 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: {message: " is already taken! Log into your existing account or choose a different address."}
   validates_presence_of :email, :password, :first_name, :last_name
+  validates_presence_of :first_name, :last_name
+  validates_presence_of :email, :password, on: :create
 
   def self.confirm(params)
     @user = User.find_by({email: params[:email]})

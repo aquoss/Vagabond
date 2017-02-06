@@ -1,5 +1,6 @@
 @import url(materialize.css);
-@import url("https://fonts.googleapis.com/css?family=Bahiana|Barrio");
+@import url(animate.css);
+@import url("https://fonts.googleapis.com/css?family=Barrio|Quattrocento+Sans:700");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .post-card {
   background-color: rgba(255, 7, 0, 0.5); }
@@ -22,8 +23,126 @@
 .post-background {
   background-color: rgba(255, 0, 0, 0.5); }
 
-.post-background {
-  background-color: rgba(255, 0, 0, 0.5); }
+.content {
+  float: left;
+  overflow: auto;
+  height: 475px;
+  margin-top: 10px;
+  max-width: 470px;
+  text-align: left; }
+
+.post-title {
+  text-align: center; }
+
+.post {
+  text-align: center;
+  padding-top: 40px; }
+
+.position {
+  position: absolute; }
+
+h1 {
+  float: left;
+  margin: 270px 0px 0px -150px;
+  /* Safari */
+  -webkit-transform: rotate(-30deg);
+  /* Firefox */
+  -moz-transform: rotate(-30deg);
+  /* IE */
+  -ms-transform: rotate(-30deg);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: "Quattrocento Sans"; }
+
+.passport {
+  height: 200px;
+  margin-top: 75px;
+  float: right; }
+
+.postcard-border {
+  margin-top: 100px;
+  border: 5px solid black;
+  height: 500px;
+  float: right;
+  margin-bottom: 20px; }
+
+.text-welcome {
+  background-image: url("http://i.imgur.com/3INFPYU.jpg");
+  height: 490px;
+  background-size: auto;
+  background-position: center;
+  box-shadow: -12px 0 8px -10px white inset; }
+
+.vr {
+  border-right: 5px solid black;
+  height: 450px;
+  margin: 25px -13px 0 0; }
+
+.stamp {
+  border: 2px solid black;
+  height: 100px;
+  width: 75px;
+  margin-top: 10px;
+  padding-top: -10px;
+  float: right; }
+
+.p-font {
+  display: block;
+  font-size: 8vw;
+  font-family: "Barrio";
+  margin-top: -35px; }
+
+.post {
+  margin-top: 125px; }
+
+p {
+  text-align: center; }
+
+hr {
+  margin-top: 10px;
+  width: 75%; }
+
+.citycard {
+  float: left;
+  height: 200px;
+  width: 32%;
+  border: 1px solid black;
+  margin: 0 6.5px 10px; }
+
+.citycard-text {
+  float: left;
+  /* Safari */
+  -webkit-transform: rotate(-30deg);
+  /* Firefox */
+  -moz-transform: rotate(-30deg);
+  /* IE */
+  -ms-transform: rotate(-30deg);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: "Quattrocento Sans";
+  font-size: 2em;
+  background-position: center; }
+
+.post {
+  overflow: auto;
+  height: 300px; }
+
+h1 {
+  float: left;
+  margin: 270px 0px 0px -150px;
+  /* Safari */
+  -webkit-transform: rotate(-30deg);
+  /* Firefox */
+  -moz-transform: rotate(-30deg);
+  /* IE */
+  -ms-transform: rotate(-30deg);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: "Quattrocento Sans"; }
+
+.text {
+  height: 490px;
+  background-size: auto 100%;
+  background-attachment: fixed;
+  background-position: center;
+  box-shadow: -12px 0 8px -10px white inset; }
 
 h1, h2, h3, h4, h5, h6 {
   color: white; }

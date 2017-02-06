@@ -117,4 +117,25 @@ a:hover {
   height: 7.7em;
   width: 11.7em;
   background-color: rgba(0,0,0,0.6);
+  
+.post {
+  overflow: auto;
+  height: 300px;
+}
+
+h1 {
+  float: left;
+  margin: 270px 0px 0px -150px;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: "Quattrocento Sans"; }
+
+.text {
+  height: 490px;
+  background-size: auto 100%;
+  background-attachment: fixed;
+  background-position: center;
+  box-shadow: -12px 0 8px -10px white inset;
 }

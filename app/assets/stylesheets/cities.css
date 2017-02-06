@@ -1,3 +1,4 @@
+
 /* SHOW CITY CSS */
 .form-button {
   margin-top: 5%;
@@ -19,3 +20,7 @@
 
 .welcome {
   font-size: 1.17em; }
+
+.post {
+  overflow: auto 500px;
+  max-height: 500px; }
