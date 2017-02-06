@@ -43,7 +43,7 @@ city_data = [{
     gif: "https://media.giphy.com/media/xTiTndRhkTeDSUEgak/giphy.gif"
   }, {
     city_name: "Hong Kong",
-    photo: "https://www.sarahlawrence.edu/media/study-abroad-and-exchange/beijing/beijing_main_shutterstock_111796310.jpg",
+    photo: "http://static.asiawebdirect.com/m/phuket/portals/hong-kong-hotels-ws/homepage/top10/top10-hotels/pagePropertiesImage/top10-hotels-hongkong.jpg",
     gif: "https://media.giphy.com/media/tGOKSq52jeq3u/source.gif"
   }, {
     city_name: "Sydney",
