@@ -5,11 +5,17 @@
 .content {
   float: left;
   overflow: auto;
-  height: 485px;
-  max-width: 475px;
+  height: 475px;
+  margin-top: 10px;
+  max-width: 470px;
   text-align: left;
+}
+
+.post-title {
+  text-align: center;
 }
 
 .post {
   text-align: center;
+  padding-top: 40px;
 }

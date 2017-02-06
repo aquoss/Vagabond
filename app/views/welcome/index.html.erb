@@ -26,12 +26,12 @@
 </div>
 <div class="row center">
   <% @city.each do |city| %>
-  <a href="<% city_path(city.id) %>">
-    <div class="citycard" style="background-image: url(<%= city.gif %>);">
-      <div class="col m6">
-        <p class="citycard-text"><%= city.city_name %></p>
+    <%= link_to city_path(city.id) do %>
+      <div class="citycard" style="background-image: url(<%= city.gif %>);">
+        <div class="col m6">
+          <p class="citycard-text"><%= city.city_name %></p>
+        </div>
       </div>
-    </div>
-  </a>
+    <% end %>
   <% end %>
 </div>

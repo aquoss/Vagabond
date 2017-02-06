@@ -3,6 +3,8 @@
     <div class="row">
       <div class="col m6 text">
         <div class="content">
+          <h3 class="post-title"><%= @post.title %></h3>
+          <hr>
           <%= @post.content %>
         </div>
         <div class="vr">
@@ -14,22 +16,11 @@
         </div>
         <div class="post">
             <p>
-              <h3><%= @post.title %></h3>
+              <h5>by <%= link_to "#{@post.user.first_name} #{@post.user.last_name}", user_path(@post.user) %></h5>
               <hr>
-              <h5><%= @post.user.first_name%> <%= @post.user.last_name%></h5>
-              <hr>
-              <br>
-              <h6>post.city.name</h6>
+              <h5>in <%= link_to "#{@post.city.city_name}", city_path(@post.city.id) %></h5>
               <hr>
             </p>
-        </div>
-        <div class="col m4 offset-m4">
-          <a href="#" class="waves-effect waves-light btn-large form-button"></a>
-          <% if @user == current_user then %>
-            <%= link_to "Edit Post", edit_city_post_path(@city), :class => 'waves-effect waves-light btn-large form-button' do %>
-              <i class="material-icons">mode_edit</i>
-            <% end %>
-          <% end %>
         </div>
       </div>
 
