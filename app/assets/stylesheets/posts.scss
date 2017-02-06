@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 .content {
   float: left;
   overflow: auto;
@@ -13,6 +15,11 @@
 
 .post-title {
   text-align: center;
+  margin-left: 65px;
+}
+
+hr {
+  margin-left: 80px;
 }
 
 .post {

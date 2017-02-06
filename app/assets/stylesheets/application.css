@@ -32,7 +32,11 @@
   text-align: left; }
 
 .post-title {
-  text-align: center; }
+  text-align: center;
+  margin-left: 65px; }
+
+hr {
+  margin-left: 80px; }
 
 .post {
   text-align: center;
@@ -112,6 +116,9 @@ hr {
   border: 1px solid black;
   margin: 0 6.5px 10px; }
 
+.citycard-margin {
+  margin-top: 10px; }
+
 .citycard-text {
   float: left;
   /* Safari */
@@ -120,6 +127,7 @@ hr {
   -moz-transform: rotate(-30deg);
   /* IE */
   -ms-transform: rotate(-30deg);
+  color: black;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   font-family: "Quattrocento Sans";
   font-size: 2em;
