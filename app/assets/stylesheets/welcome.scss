@@ -90,6 +90,10 @@ hr {
 //   margin: 15px -15px 0 0;
 // }
 
+.citycard-margin {
+  margin-top: 10px;
+}
+
 .citycard-text {
   float: left;
   /* Safari */
@@ -98,6 +102,7 @@ hr {
   -moz-transform: rotate(-30deg);
   /* IE */
   -ms-transform: rotate(-30deg);
+  color: black;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   font-family: "Quattrocento Sans";
   font-size: 2em;

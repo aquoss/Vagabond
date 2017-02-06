@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .post {
   overflow: auto;
   height: 300px;
@@ -25,4 +26,8 @@ h1 {
   background-attachment: fixed;
   background-position: center;
   box-shadow: -12px 0 8px -10px white inset;
+}
+
+.stamp-link {
+  margin-top: -30px;
 }

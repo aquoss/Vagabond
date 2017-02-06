@@ -2,7 +2,7 @@
   <div class="col m12 postcard-border">
     <div class="row">
       <div class="col m6 text">
-        <div class="content">
+        <div class="content col m12">
           <h3 class="post-title"><%= @post.title %></h3>
           <hr>
           <%= @post.content %>
@@ -11,9 +11,23 @@
         </div>
       </div>
       <div class="col m6 address">
-        <div class="stamp">
-          <span class="p-font">P</span>
-        </div>
+        <% if @user == current_user %>
+          <div class="stamp">
+            <%= link_to city_post_path(@post.city.id, @post.id), action: "destroy", class: "stamp-link" do%>
+              <p><span class="make-small"> Delete</span> <br> Post </p>
+            <% end %>
+          </div>
+          <div class="stamp">
+            <%= link_to edit_city_post_path(@post.city.id, @post.id), class: "stamp-link" do%>
+            <p> Edit <br> Post </p>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="stamp">
+          </div>
+          <div class="stamp">
+          </div>
+        <% end %>
         <div class="post">
           <p>
             <h5>by <%= link_to "#{@post.user.first_name} #{@post.user.last_name}", user_path(@post.user) %></h5>
