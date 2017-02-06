@@ -2,6 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.post-card {
+  background-color: rgba(255, 7, 0, .5);
+}
+
+.user-info {
+  background-color: rgba(0, 178, 155, .5);
+}
+
 .edit-circle {
   margin: -20px 15px 0 0;
+}
+
+.post-author {
+  margin-top: 55px;
+}
+
+.userphoto-small {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin-top: 45px;
+}
+
+.post-background {
+  background-color: rgba(255, 0, 0, 0.5);
 }

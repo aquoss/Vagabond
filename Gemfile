@@ -33,7 +33,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # Httparty
 gem 'httparty'
-
 # normalize
 gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 # Materialize-Sass
@@ -43,6 +42,8 @@ gem 'materialize-sass', '~> 0.97.8'
 gem 'carrierwave', '~> 1.0'
 # MiniMagick
 gem 'mini_magick', '~> 4.3'
+# Figaro - securely configure Rails applications - using with action_mailer
+gem "figaro"
 
 
 # Use Capistrano for deployment

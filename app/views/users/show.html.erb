@@ -1,45 +1,65 @@
 <h3 class="center">User Show</h3>
 <br>
 <div class="row">
-    <div class="col s12 m5">
-      <div class="card">
-        <div class="card-image">
-          <%= image_tag @user.photo, class: "userphoto" %>
-          <span class="card-title"><%= @user.first_name %> <%= @user.last_name %></span>
-          <% if @user == current_user then %>
-            <%= link_to edit_user_path(@user), :class => 'btn-floating halfway-fab waves-effect waves-light red right edit-circle' do %>
-              <i class="material-icons">mode_edit</i>
-            <% end %>
+  <div class="col s12 m5">
+    <div class="card">
+      <div class="card-image">
+        <%= image_tag @user.photo, class: "userphoto" %>
+        <span class="card-title"><%= @user.first_name %> <%= @user.last_name %></span>
+        <% if @user == current_user then %>
+          <%= link_to edit_user_path(@user), :class => 'btn-floating halfway-fab waves-effect waves-light red right edit-circle' do %>
+            <i class="material-icons">mode_edit</i>
           <% end %>
-        </div>
-        <div class="card-content">
-          <p>Current City: <%= @user.current_city %></p>
-          <p>Join Date: <%= @user.created_at %> </p>
-        </div>
+        <% end %>
+      </div>
+      <div class="card-content">
+        <p>Current City: <%= @user.current_city %></p>
+        <p>Join Date: <%= @user.created_at.to_formatted_s(:db) %> </p>
+        <%= render "follow_form" if !current_user.nil? %>
       </div>
     </div>
+    <% if @user == current_user %>
+      <%= render "following_card" %>
+    <% else %>
+      <%= render "followers_card" %>
+    <% end %>
+  </div>
+
   <div class="col s12 m6 offset-m1">
-    <h4 class="center">My Posts</h4>
+    <h4 class="center">Posts</h4>
     <br>
     <% @user.posts.each do |post| %>
       <div class="card horizontal">
         <div class="card-stacked">
           <div class="card-content">
-            <div class="col m10">
-              <%= link_to "#{post.title}", city_post_path(post.city, post) %>
+            <% if @user == current_user %>
+              <div class="col m10">
+            <% else %>
+              <div class="col m12">
+            <% end %>
+              City: <%= link_to "#{post.city.city_name}", city_path(post.city.id) %>
+              <br>
+              <b><%= link_to "#{post.title}", city_post_path(post.city, post) %></b>
               <br>
               <%= "#{post.content}" %>
               <br><br>
             </div>
-            <div class="col m2">
-              <br>
-              <i class="material-icons">mode_edit</i>
-              <br><br>
-              <i class="material-icons">delete</i>
-            </div>
+            <% if @user == current_user %>
+              <div class="col m2">
+                <br>
+                <%= link_to edit_city_post_path(post.city, post) do %>
+                  <i class="material-icons">mode_edit</i>
+                <% end %>
+                <br><br>
+                <%= link_to city_post_path(post.city, post), action: "destroy" do %>
+                  <i class="material-icons">delete</i>
+                <% end %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
+
 </div>

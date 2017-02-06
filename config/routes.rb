@@ -19,4 +19,11 @@ Rails.application.routes.draw do
     resources :posts
   end
 
+  # USERS AND FOLLOWERS ROUTES
+  get '/users/:id/following', to: 'users#following', as: 'following_user'
+  get '/users/:id/followers', to: 'users#followers', as: 'followers_user'
+
+  # ROUTES FOR USER RELATIONSHIPS (FOLLOW/UNFOLLOW)
+  resources :relationships, only: [:create, :destroy]
+
 end
