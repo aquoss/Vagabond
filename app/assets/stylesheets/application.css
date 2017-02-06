@@ -39,8 +39,8 @@ a {
   color: white; }
 
 a:hover {
-  color: #7D0BFF;
-  transition: 0.2s; }
+  color: #C18BFF;
+  transition: 0.3s; }
 
 .form-button {
   margin-top: 5%;
@@ -85,9 +85,7 @@ a:hover {
   padding: 0.5em;
   width: 2em;
   height: 2em;
-  position: fixed;
-  margin-top: 0.7em;
-  margin-left: 12em;
+  margin: 0.7em 0.8em -3em 12em;
   border: 1px white solid;
   float: right; }
 
@@ -120,13 +118,11 @@ a:hover {
 .add-new {
   margin: 0; }
 
-.postcard-ld-text:hover, .postcard-ld-posts:hover {
-  color: #7D0BFF;
-  border-color: #7D0BFF;
-  transition: 0.2s; }
-
-.add-new:hover {
-  color: #7D0BFF; }
+.background {
+  margin: -1em;
+  height: 7.7em;
+  width: 11.7em;
+  background-color: rgba(0, 0, 0, 0.6); }
 
 html {
   text-align: center; }

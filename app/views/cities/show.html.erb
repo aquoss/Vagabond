@@ -4,18 +4,19 @@
 
     <h3>Welcome to <%= @city.city_name %>.</h3>
 
-
-    <div class="postcard-ld">
-      <div class="postcard-font postcard-stamp">
-        <p><%= @city.posts.count %></p>
-      </div>
-      <div class="postcard-font postcard-ld-text">
-        <p class="add-new"><%= link_to "Write a postcard for #{@city.city_name}", new_city_post_path(@city) %></p>
-      </div>
-      <div class="postcard-number postcard-font postcard-ld-addr">
-        <p>
-          <br> POSTCARD<% if @city.posts.count > 1 %>S<% end %>
-        </p>
+    <div class="postcard-posts-container">
+      <div class="postcard-ld">
+        <div class="postcard-font postcard-stamp">
+          <p><%= @city.posts.count %></p>
+        </div>
+        <div class="postcard-font postcard-ld-text">
+          <p><%= link_to "Write a postcard for #{@city.city_name}", new_city_post_path(@city) %></p>
+        </div>
+        <div class="postcard-number postcard-font postcard-ld-addr">
+          <p>
+            <br> POSTCARD<% if @city.posts.count > 1 %>S<% end %>
+          </p>
+        </div>
       </div>
     </div>
 
@@ -24,7 +25,9 @@
   <% @city.posts.order(created_at: :desc).each do |post| %>
     <div class="postcard-posts-container">
       <div class="postcard-ld-posts" style="background-image: url('<%= @city.photo %>'); background-size: 100%;">
-        <%= link_to "#{post.title}", city_post_path(@city, post) %>, <br>
+        <div class="background">
+          <%= link_to "#{post.title}",  city_post_path(@city, post) %>, <br>
+        </div>
       </div>
     </div>
   <% end %>
