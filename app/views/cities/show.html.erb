@@ -9,7 +9,9 @@
       </div>
       <div class="col m6 address">
         <div class="stamp">
-          <span class="p-font">P</span>
+          <%= link_to new_city_post_path(@city.id), class: "stamp-link" do%>
+            <p> Add <br> Post </p>
+          <% end %>
         </div>
         <div class="post">
           <% @city.posts.order(created_at: :desc).each do |post| %>

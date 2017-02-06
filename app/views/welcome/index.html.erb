@@ -8,7 +8,6 @@
       </div>
       <div class="col m6 address">
         <div class="stamp animated rollIn">
-          <span class="p-font animated rollIn">P</span>
         </div>
         <br><br><br><br><br><br><br>
         <p>A community for travelers to gather</p>
@@ -27,7 +26,7 @@
   <% @city.each do |city| %>
     <%= link_to city_path(city.id) do %>
       <div class="citycard" style="background-image: url(<%= city.gif %>);">
-        <div class="col m6">
+        <div class="col m6 citycard-margin">
           <p class="citycard-text"><%= city.city_name %></p>
         </div>
       </div>
