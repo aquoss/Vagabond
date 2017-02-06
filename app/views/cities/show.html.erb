@@ -1,4 +1,36 @@
-<h3>Welcome to <%= @city.city_name %>!</h3>
+<span class="position"><h1>Welcome to <%= @city.city_name %></h1></span>
+<div class="row">
+  <div class="col m12 postcard-border">
+    <div class="row">
+      <div class="col m6 text" style="background-image: url(<%= @city.photo %>);">
+        <div class="vr">
+
+        </div>
+      </div>
+      <div class="col m6 address">
+        <div class="stamp">
+          <span class="p-font">P</span>
+        </div>
+        <div class="post">
+          <% @city.posts.order(created_at: :desc).each do |post| %>
+            <p>
+              <strong><%= link_to "#{post.title}", city_post_path(@city, post)%></strong>
+              by <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(post.user) %>
+            </p>
+            <hr>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <h3>Welcome to <%= @city.city_name %>!</h3>
 <div id="cityHeroImage"><%= image_tag @city.photo %> </div>
 
 <h2>Adventures!</h2>
@@ -7,6 +39,9 @@
   by <%= link_to "#{post.user.first_name} #{post.user.last_name}", user_path(post.user) %> <br>
 <% end %>
 
+
 <% if current_user then %>
   <%= link_to "Add New Post for #{@city.city_name}", new_city_post_path(@city) %>
 <% end %>
+
+<%= link_to "Add New Post for #{@city.city_name}", new_city_post_path(@city) %> -->
