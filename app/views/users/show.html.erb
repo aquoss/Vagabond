@@ -14,7 +14,7 @@
       </div>
       <div class="card-content">
         <p>Current City: <%= @user.current_city %></p>
-        <p>Join Date: <%= @user.created_at %> </p>
+        <p>Join Date: <%= @user.created_at.to_formatted_s(:db) %> </p>
         <%= render "follow_form" if !current_user.nil? %>
       </div>
     </div>
